@@ -1,0 +1,39 @@
+{
+  "name": "graphql-typescript",
+  "version": "1.0.0",
+  "description": "A study on graphql and typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "typescript"
+  ],
+  "author": "pehlse",
+  "license": "ISC",
+  "dependencies": {
+    "@typegoose/typegoose": "^7.2.0",
+    "apollo-server-express": "^2.15.1",
+    "class-validator": "^0.12.2",
+    "express": "^4.17.1",
+    "graphql": "^15.2.0",
+    "mongoose": "^5.9.21",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@types/express": "github:types/express",
+    "@types/graphql": "^14.5.0",
+    "@types/mongoose": "^5.7.29",
+    "@types/node": "^14.0.14",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  }
+}

@@ -5,10 +5,12 @@ import { buildSchema } from "type-graphql";
 import { connect } from "mongoose";
 
 import { CategoriesResolver } from "./resolvers/Categories";
+import { UsersResolver } from './resolvers/Users';
+
 
 const main = async () => {
   const schema = await buildSchema({
-      resolvers: [CategoriesResolver],
+      resolvers: [CategoriesResolver, UsersResolver],
       emitSchemaFile: true,
       validate: false,
     });

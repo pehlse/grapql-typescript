@@ -17,10 +17,27 @@ input CategoriesInput {
 
 type Mutation {
   createCategory(data: CategoriesInput!): Categories!
+  createUser(data: UsersInput!): User!
   deleteCategory(id: String!): Boolean!
+  deleteUser(id: String!): Boolean!
 }
 
 type Query {
-  returnAllCategories: [Categories!]!
+  returnAllCategories: [User!]!
   returnSingleCategory(id: String!): Categories!
+  returnSingleUser(id: String!): User!
+}
+
+"""The User model"""
+type User {
+  cart_id: String!
+  email: String!
+  id: ID!
+  username: String!
+}
+
+input UsersInput {
+  cart_id: ID!
+  email: String!
+  username: String!
 }
